@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.header {
+    background-image: linear-gradient(to top, rgb(0, 255, 213) 20%, rgb(0, 255, 119) 70%);
+    height: 100vh;
+    display: flex;
+    border-bottom: rgb(0, 255, 213) solid 3px;
+    border-top: rgb(0, 255, 213) solid 3px;
+}
+
+.left {
+    background-color: #222121;
+    width: 50%;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0% 100%, 0% 50%, 0 0);
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    background-image: url(img/efel-tower.jpg);
+    filter: brightness(120%);
+    filter: opacity(75%);
+    background-size: cover;
+    width: 50%;
+    transition: 0.5s ease-in-out;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+.right:hover {
+    filter: opacity(100%);
+}
+
+.content {
+    height: 60vh;
+    width: 60%;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 42px;
+    color: #ffff;
+    animation: Bigtext 1s;
+}
+
+.place {
+    color: rgb(0, 255, 213);
+}
+
+.sub_title {
+    font-size: 52px;
+    color: rgb(0, 255, 213);
+    animation: Bigtext 1.2s;
+}
+
+.sub_place {
+    color: #ffff;
+}
+
+.text {
+    color: #ffff;
+    text-align: justify;
+    animation: Bigtext 1.4s;
+}
+/* end header */
+.area_one{
+    height: 70vh;
+    display: flex;
+}
+
+.box{
+    background-color: #222121;
+    width: 33.3%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+/* 
+.box_two{
+    background-color: yellow;
+    width: 33.3%;
+}
+
+.box_three{
+    background-color: blue;
+    width: 33.3%;
+} */
+
+.circle {
+    background-color: #392f54;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 60px;
+    transition: 0.5s;
+}
+
+.circle:hover {
+    transform: scale(0.8);
+}
+
+.fa{
+    color: rgb(0, 255, 213);
+}
+
+.icon {
+    margin: 40px;
+}
+
+.content_box {
+    grid-row: 3/5;
+    grid-column: 1/4;
+    text-align: center;
+}
+
+.title_box {
+    padding: 15px;
+    color:  rgb(0, 255, 119);
+}
+
+.text_box {
+    padding: 0px 40px;
+    text-align: center;
+    font-size: large;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @keyframes Bigtext {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 100;
+        transform: scale(1);
+    }
+} */
+
+@media only screen and (max-width: 1200px) {
+    .left {
+        clip-path: none;
+    }
+
+    .right {
+        clip-path: none;
+        background-position: center;
+    }
+
+    .content {
+        width: 90%;
+        height: 90vh;
+        margin-left: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .sub_title {
+        font-size: 40px;
+        margin-top: 30px;
+    }
+
+    .text {
+        font-size: 10px;
+        margin-top: 30px;
+    }
+
+}
